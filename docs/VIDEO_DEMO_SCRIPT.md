@@ -13,8 +13,8 @@
 | Time | Duration | App Tab / Screen Location | On-Screen Action (What to Click / Show) | Spoken Narration (What to Say) |
 | :--- | :---: | :--- | :--- | :--- |
 | **0:00 - 0:25** | 25s | **Tab: Home / Landing** (`/`) | Start on hero section. Hover over the 4 live KPI metric cards. | **Hook & The Perishability Trap** |
-| **0:25 - 0:55** | 30s | **Tab: Donor Portal** (`/donor`) | Move sliders: Temp to 34°C, Humidity to 75%, select "Open". Point at live Arrhenius decay timer. Click "Submit Surplus". | **Engine 1: Arrhenius Spoilage Kinetics** |
-| **0:55 - 1:35** | 40s | **Tab: Dispatch Center** (`/dispatch`) | View OpenStreetMap. Show pulsating pins. Click **"Batch Match All"**. Hover on the sub-15ms badge & curved road geometry. | **Engine 2: Kuhn-Munkres Real-Time Matching** |
+| **0:25 - 0:55** | 30s | **Tab: Donor Portal** (`/donor`) | Move sliders: Temp to 35°C, Humidity to 75%, select "Open". Point at live Arrhenius decay timer. Click "Submit Surplus". | **Engine 1: Arrhenius Spoilage Kinetics** |
+| **0:55 - 1:35** | 40s | **Tab: Dispatch Center** (`/dispatch`) | View OpenStreetMap. Show pulsating pins. Click **"Batch Match All"**. Point to `2.4ms` badge, road curves, and explain **Zero-API Dependency + Pluggable Keys**. | **Engine 2: Kuhn-Munkres Real-Time Matching & Pluggable Routing** |
 | **1:35 - 2:00** | 25s | **Dispatch Drawer / Match Card** | Click on a matched card. Expand the **SHAP Explanation** bar chart. Point out the Gini fairness score. | **Engine 3: TreeSHAP Trust & Algorithmic Equity** |
 | **2:00 - 2:25** | 25s | **Tab: Audit Vault** (`/audit`) | Click **"Verify Chain Integrity"** (green checkmark). Click on a transaction to reveal SHA-256 hash & Safe Haven Certificate. | **Engine 4: Cryptographic Custody & Liability Shield** |
 | **2:25 - 2:45** | 20s | **Tab: Tech Architecture** (`/about`) | Scroll down to the IBM LinuxONE & s390x section. Highlight CPACF crypto co-processing and 7-nines availability. | **Why IBM LinuxONE (s390x) & Enterprise Hardware** |
@@ -44,7 +44,7 @@
   - Click on the **"Donor Portal"** tab in the top navigation bar.
   - Fill or adjust the form: Select **"Cooked Hot Meals"**, set **Quantity: 25 kg**.
   - **Crucial Interaction:** Drag the **Ambient Temperature slider** up to **35°C** and the **Humidity slider** to **75%**. Change packaging to **"Open Tray"**.
-  - Point your mouse at the **Dynamic Safe Life Countdown badge** dynamically shrinking in real time.
+  - Point your mouse at the **Dynamic Safe Life Countdown badge** dynamically shrinking in real time from 4 hours down to ~75 minutes.
   - Click **"Register Surplus Donation"**.
 - **🗣️ Voiceover:**
   > *"It begins the second surplus is identified. Instead of static expiration dates, our **Arrhenius Spoilage Engine** uses physical chemistry reaction kinetics to predict microbial decay in real time.*
@@ -55,22 +55,22 @@
 
 ---
 
-### 🎬 Scene 3: Engine 2 — Kuhn-Munkres Real-Time Bipartite Matching (0:55 – 1:35)
+### 🎬 Scene 3: Engine 2 — Kuhn-Munkres Matching & Pluggable Routing (0:55 – 1:35)
 - **🖥️ Screen Action:** 
   - The app automatically redirects (or you click) to the **"Dispatch Center"** tab.
   - Show the interactive **OpenStreetMap** with pulsating color-coded donor (red) and NGO shelter (green) markers.
-  - Highlight the active queue.
   - **Crucial Interaction:** Click the prominent **"⚡ Batch Match All Unmatched"** button.
   - Point to the instant toast notification: *"Matched in 2.4 ms"*.
-  - Point out the curved street routes connecting donors directly to matched shelters on the map.
+  - Show the curved street routes connecting donors directly to matched shelters on the map.
+  - **Hover over the routing badge:** Show the *"OpenRouteService Live / Street Route"* indicator.
 - **🗣️ Voiceover:**
   > *"Here in the Dispatch Command Center, our second engine takes over: the **Kuhn-Munkres Hungarian Algorithm**.*
   > 
-  > *Naive food delivery apps make greedy single-point matches that starve distant shelters. NourishNet AI builds a global bipartite cost matrix that optimizes five critical factors simultaneously: urgency, capacity fit, community need, road proximity, and dietary restrictions.*
+  > *With one click on 'Batch Match', the engine solves the global assignment across all city donors and NGOs in just **2.4 milliseconds**—well below our 50-millisecond critical decision SLA.*
   > 
-  > *Watch: with one click on 'Batch Match', the engine solves the global assignment across all city donors and NGOs in just **2.4 milliseconds**—well below the 50-millisecond critical decision SLA.*
+  > *Now, a vital architectural design decision: **NourishNet AI is 100% self-contained and zero-dependency out-of-the-box.** The map runs on crisp, free OpenStreetMap tiles with zero commercial API keys or watermarks, and calculates mathematical geodesic routes on-chip so it never fails during emergency network blackouts.*
   > 
-  > *And notice the map: our engine integrates real-time road geometries, enforcing a hard mathematical constraint that travel time plus a buffer never exceeds the food’s biological shelf-life."*
+  > *However, our architecture is completely **pluggable**: by simply adding an API key—like OpenRouteService, Mapbox, or Google Maps—into the environment, the platform dynamically activates live turn-by-turn road geometries and street traffic curves, shown right here on the map without any code changes!"*
 
 ---
 
@@ -124,7 +124,7 @@
 - **🗣️ Voiceover:**
   > *"In our benchmark pilot alone, NourishNet AI has rescued one hundred and sixty kilograms of food—delivering four hundred nutritious meals, preventing four hundred kilograms of CO₂ emissions, and conserving sixteen thousand liters of freshwater.*
   > 
-  > *With a one-hundred percent master test pass rate and sub-fifteen millisecond latency, NourishNet AI proves that real-time AI on IBM Z can turn surplus into sustenance, and solve hunger at enterprise scale.*
+  > *With a one-hundred percent master test pass rate, zero mandatory commercial API lock-in, and sub-fifteen millisecond latency, NourishNet AI proves that real-time AI on IBM Z can turn surplus into sustenance, and solve hunger at enterprise scale.*
   > 
   > *Thank you."*
 

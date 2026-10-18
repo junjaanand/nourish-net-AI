@@ -23,8 +23,7 @@ data/*.sqlite*
 *.sqlite*
 !data/.gitkeep
 
-# Test code & caches (Excluded per project instructions)
-tests/
+# Test caches (Keep clean test code in repo, ignore caches)
 .pytest_cache/
 .coverage
 htmlcov/

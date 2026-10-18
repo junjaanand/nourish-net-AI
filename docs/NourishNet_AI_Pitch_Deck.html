@@ -641,9 +641,10 @@ Score(D, N) = w_1 S_urgency + w_2 S_capacity + w_3 S_need + w_4 S_proximity + w_
               </div>
 
               <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 12px 16px;">
-                <div style="color: #34d399; font-weight: 700; font-size: 13px;">Dual Routing: High Speed + Real Roads</div>
-                <div style="color: #e2e8f0; font-size: 13px; margin-top: 4px;">
-                  Matrix optimization operates at sub-3ms using vectorized geodesics, while on-demand OpenRouteService fetches 100+ GPS waypoints for live navigation.
+                <div style="color: #34d399; font-weight: 700; font-size: 13px;">Zero-API Dependency & Pluggable Routing</div>
+                <div style="color: #e2e8f0; font-size: 12.5px; margin-top: 4px; line-height: 1.5;">
+                  <strong>100% Self-Contained Out-of-the-Box:</strong> Runs without requiring commercial API keys, using OpenStreetMap and on-chip vectorized geodesics (sub-3ms).<br>
+                  <strong>Pluggable API Extensions:</strong> Adding an API key (OpenRouteService, Mapbox, or Google Maps) to <code>.env</code> seamlessly upgrades routes to real street turn geometries with zero code changes.
                 </div>
               </div>
             </div>
@@ -825,8 +826,8 @@ Hash_n = SHA256( CanonicalJSON(Transaction_n) || Hash_{n-1} )
           <div class="card">
             <div class="card-title">🗺️ Real-Time Dynamic Map & Vector Curving</div>
             <div class="card-body" style="font-size: 13px; line-height: 1.6;">
-              &bull; <strong>Watermark-Free Basemap:</strong> Crisp OpenStreetMap vector tiles directly rendered without commercial paywalls or unauthenticated watermarks.<br><br>
-              &bull; <strong>Road Route Geometry:</strong> Integrated OpenRouteService coordinates drawing exact street turns between donors and NGOs.<br><br>
+              &bull; <strong>Watermark-Free OpenStreetMap:</strong> Zero commercial API key dependency out-of-the-box. Crisp, unwatermarked tiles that never fail during emergency deployments.<br><br>
+              &bull; <strong>Pluggable Street Geometries:</strong> Automatically detects when an API key (e.g. OpenRouteService / Mapbox) is configured in <code>.env</code>, rendering live street turns, or gracefully falls back to instant on-chip geodesics.<br><br>
               &bull; <strong>Color-Coded Urgency Pins:</strong> Red (&lt;60m), Amber (&lt;180m), Green (&lt;480m), and Blue (&ge;480m) pins pulsating according to live biological decay countdowns.
             </div>
           </div>

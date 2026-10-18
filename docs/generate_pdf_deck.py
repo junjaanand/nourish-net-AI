@@ -369,8 +369,8 @@ def create_deck(output_pdf_path):
         Paragraph("<font color='#EF4444'><b>Constraint 2: Capacity Overload Ceiling</b></font><br/>"
                   "If <code>Donation Quantity &gt; 2 &times; NGO Capacity</code> &rArr; REJECT (&infin; cost). Prevents shelter bottlenecks.", body_style),
         Spacer(1, 8),
-        Paragraph("<font color='#10B981'><b>Dual Routing Engine:</b></font><br/>"
-                  "Sub-3ms vectorized Haversine optimization during matching + on-demand OpenRouteService turn-by-turn road geometry for active drivers.", body_style),
+        Paragraph("<font color='#10B981'><b>Zero-API Dependency & Pluggable Routing:</b></font><br/>"
+                  "100% self-contained out-of-the-box using OpenStreetMap and on-chip geodesics (sub-3ms). Pluggable into OpenRouteService / Mapbox API keys via .env for street curves without code changes.", body_style),
     ]
     box2_km = Table([[c2_km]], colWidths=[col_w])
     box2_km.setStyle(TableStyle([
@@ -514,8 +514,8 @@ def create_deck(output_pdf_path):
         Paragraph("🗺️ Watermark-Free OpenStreetMap & Route Geometry", card_title_style),
         Spacer(1, 6),
         Paragraph(
-            "&bull; <b>100% Free & Crisp:</b> Integrated OpenStreetMap tile servers with zero commercial API keys or watermarks.<br/>"
-            "&bull; <b>Turn-by-Turn Road Geometry:</b> Real road street curves rendered via OpenRouteService GPS waypoints.<br/>"
+            "&bull; <b>Zero-API Dependency:</b> Runs on open OpenStreetMap tiles with zero commercial API keys or watermark paywalls.<br/>"
+            "&bull; <b>Pluggable Road Routing:</b> Automatically renders real turn-by-turn road curves when an API key (e.g. OpenRouteService/Mapbox) is provided in .env, or falls back to fast on-chip geodesics.<br/>"
             "&bull; <b>Dynamic Urgency Pins:</b> Red (&lt;60m), Amber (&lt;180m), Green (&lt;480m), and Blue (&ge;480m) pins pulsating according to live decay countdowns.",
             body_style
         )
