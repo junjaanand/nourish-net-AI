@@ -3,6 +3,7 @@
 > **Detect Spoilage. Decide Matches. Respond Before Food Expires.**
 
 [![IBM Z Datathon 2026](https://img.shields.io/badge/IBM%20Z-Datathon%202026-0F62FE?style=for-the-badge&logo=ibm)](https://hack2skill.com/event/datathon-2026)
+[![Event Code](https://img.shields.io/badge/Event%20Code-SSF2026-critical?style=for-the-badge)]()
 [![Track 1](https://img.shields.io/badge/Track%201-Real--Time%20AI%20for%20Critical%20Decisions-10B981?style=for-the-badge)]()
 [![Platform](https://img.shields.io/badge/Platform-IBM%20LinuxONE%20(s390x)-7C3AED?style=for-the-badge)]()
 [![Test Suite](https://img.shields.io/badge/Tests-66%2F66%20Passed%20(100%25)-brightgreen?style=for-the-badge)]()
