@@ -45,7 +45,7 @@ if [ "$(uname -m)" = "s390x" ]; then
     if ! $PYTHON -c "import scipy, numpy, sklearn, pandas, matplotlib" &>/dev/null; then
         echo "📦 Installing Ubuntu pre-compiled scientific packages for s390x..."
         sudo apt-get update -qq
-        sudo apt-get install -y -qq python3-scipy python3-numpy python3-pandas python3-sklearn python3-matplotlib python3-venv libopenblas-dev
+        sudo apt-get install -y -qq python3-scipy python3-numpy python3-pandas python3-sklearn python3-matplotlib python3-venv python3-dev build-essential libopenblas-dev
         echo "✅ System scientific packages installed"
         echo ""
     fi
