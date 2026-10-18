@@ -210,7 +210,7 @@ $$\text{Water Saved (L)} = \text{Total Rescued (kg)} \times 100$$
 
 All submission assets are cleanly maintained inside the [`docs/`](docs/) directory:
 
-- 📄 **[Executive PDF Pitch Deck](docs/NourishNet_AI_Pitch_Deck.pdf):** 12-page landscape PDF (< 5 MB) containing full architectural breakdowns, mathematical proofs, team roles, and Track 1 rubric alignment.
+- 📄 **[Executive PDF Pitch Deck](docs/NourishNet_AI_Infinityhacks.pdf):** 12-page publication-grade landscape presentation by Team Infinityhacks containing full architectural breakdowns, mathematical proofs, team roles, and Track 1 rubric alignment.
 - 🎙️ **[Video Demo Script & Navigation Guide](docs/VIDEO_DEMO_SCRIPT.md):** 3-minute scene-by-scene presentation script synchronized with UI navigation cues.
 
 ---
