@@ -44,8 +44,8 @@ echo ""
 VENV_DIR=".venv"
 
 if [ ! -d "$VENV_DIR" ]; then
-    echo "📦 Creating virtual environment..."
-    $PYTHON -m venv $VENV_DIR
+    echo "📦 Creating virtual environment with system site packages..."
+    $PYTHON -m venv --system-site-packages $VENV_DIR
 fi
 
 source $VENV_DIR/bin/activate
