@@ -1,32 +1,25 @@
-# NourishNet AI - Dependencies
+# NourishNet AI - Production Dependencies
 # IBM Z Datathon 2026 | Track 1: Real-Time AI for Critical Decisions
 
-# Backend
-fastapi==0.115.0
-uvicorn[standard]==0.30.0
+# Backend & Server (FastAPI ASGI Core serving React 18 SPA)
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
 pydantic>=2.0
-python-dotenv==1.0.1
-aiofiles==24.1.0
+python-dotenv>=1.0.0
+aiofiles>=23.2.0
 
-# AI / ML
-scipy>=1.13.0
-scikit-learn>=1.5.0
-numpy>=1.26.0
-shap>=0.45.0
+# AI / ML Core Engines
+scipy>=1.10.0
+scikit-learn>=1.2.0
+numpy>=1.24.0
+shap>=0.42.0
 
-# Visualization
-matplotlib>=3.9.0
-plotly>=5.22.0
-folium>=0.17.0
-
-# Frontend
-streamlit>=1.38.0
-streamlit-folium>=0.22.0
-
-# Geospatial
-geopy>=2.4.0
+# Visualization & Geodesics
+matplotlib>=3.7.0
+plotly>=5.15.0
+geopy>=2.3.0
 
 # Utilities
-requests>=2.32.0
+requests>=2.28.0
 jinja2>=3.1.0
-pandas>=2.2.0
+pandas>=1.5.0
