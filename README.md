@@ -208,12 +208,10 @@ $$\text{Water Saved (L)} = \text{Total Rescued (kg)} \times 100$$
 
 ## 📂 Documentation & Submission Assets
 
-All presentation assets are cleanly maintained inside the [`docs/`](docs/) directory:
+All submission assets are cleanly maintained inside the [`docs/`](docs/) directory:
 
-- 📊 **[Interactive HTML Pitch Deck](docs/NourishNet_AI_Pitch_Deck.html):** 12-slide publication-grade presentation with animations, keyboard navigation, and Carbon Design styling.
-- 📄 **[Executive PDF Pitch Deck](docs/NourishNet_AI_Pitch_Deck.pdf):** 12-page landscape PDF (< 5 MB) ready for direct hackathon upload.
-- 🎙️ **[Video Demo Script & Navigation Guide](docs/VIDEO_DEMO_SCRIPT.md):** 3-minute scene-by-scene script synchronized with UI navigation cues.
-- 🛠️ **[PDF Generator Tool](docs/generate_pdf_deck.py):** Self-contained ReportLab script that compiles the deck.
+- 📄 **[Executive PDF Pitch Deck](docs/NourishNet_AI_Pitch_Deck.pdf):** 12-page landscape PDF (< 5 MB) containing full architectural breakdowns, mathematical proofs, team roles, and Track 1 rubric alignment.
+- 🎙️ **[Video Demo Script & Navigation Guide](docs/VIDEO_DEMO_SCRIPT.md):** 3-minute scene-by-scene presentation script synchronized with UI navigation cues.
 
 ---
 
