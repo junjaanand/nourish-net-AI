@@ -9,7 +9,7 @@ set -e
 echo "╔════════════════════════════════════════════════════════╗"
 echo "║        🍽️  NourishNet AI — LinuxONE Deployer          ║"
 echo "║        IBM Z Datathon 2026                             ║"
-echo "╚════════════════════════════════════════════════════════╝"
+╚════════════════════════════════════════════════════════╝"
 echo ""
 
 # ── Platform verification ─────────────────────────────────────────────────
@@ -40,22 +40,41 @@ fi
 echo "🐍 Using: $PYTHON ($($PYTHON --version))"
 echo ""
 
+# ── s390x System Packages Check ───────────────────────────────────────────
+if [ "$(uname -m)" = "s390x" ]; then
+    if ! $PYTHON -c "import scipy, numpy, sklearn, pandas" &>/dev/null; then
+        echo "📦 Installing Ubuntu pre-compiled scientific packages for s390x..."
+        sudo apt-get update -qq
+        sudo apt-get install -y -qq python3-scipy python3-numpy python3-pandas python3-sklearn python3-venv libopenblas-dev
+        echo "✅ System scientific packages installed"
+        echo ""
+    fi
+fi
+
 # ── Virtual environment ───────────────────────────────────────────────────
 VENV_DIR=".venv"
 
-if [ ! -d "$VENV_DIR" ]; then
-    echo "📦 Creating virtual environment with system site packages..."
-    $PYTHON -m venv --system-site-packages $VENV_DIR
+# If venv exists but cannot import scipy, recreate with system-site-packages
+if [ -d "$VENV_DIR" ]; then
+    if ! "$VENV_DIR/bin/python3" -c "import scipy" &>/dev/null; then
+        echo "🔄 Recreating virtual environment with system packages..."
+        rm -rf "$VENV_DIR"
+    fi
 fi
 
-source $VENV_DIR/bin/activate
+if [ ! -d "$VENV_DIR" ]; then
+    echo "📦 Creating virtual environment with system site packages..."
+    $PYTHON -m venv --system-site-packages "$VENV_DIR"
+fi
+
+source "$VENV_DIR/bin/activate"
 echo "✅ Virtual environment activated"
 echo ""
 
 # ── Install dependencies ─────────────────────────────────────────────────
 echo "📥 Installing dependencies..."
 pip install --upgrade pip -q
-pip install -r requirements.txt -q
+pip install -r requirements.txt
 echo "✅ Dependencies installed"
 echo ""
 
@@ -78,7 +97,7 @@ sleep 1
 
 # ── Start unified server ─────────────────────────────────────────────────
 echo "🚀 Starting unified FastAPI + React server on port 8000..."
-nohup $PYTHON -m uvicorn backend.main:app --host 0.0.0.0 --port 8000 > server.log 2>&1 &
+nohup python -m uvicorn backend.main:app --host 0.0.0.0 --port 8000 > server.log 2>&1 &
 SERVER_PID=$!
 echo "   PID: $SERVER_PID"
 sleep 3
