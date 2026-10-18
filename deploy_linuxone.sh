@@ -42,10 +42,10 @@ echo ""
 
 # ── s390x System Packages Check ───────────────────────────────────────────
 if [ "$(uname -m)" = "s390x" ]; then
-    if ! $PYTHON -c "import scipy, numpy, sklearn, pandas" &>/dev/null; then
+    if ! $PYTHON -c "import scipy, numpy, sklearn, pandas, matplotlib" &>/dev/null; then
         echo "📦 Installing Ubuntu pre-compiled scientific packages for s390x..."
         sudo apt-get update -qq
-        sudo apt-get install -y -qq python3-scipy python3-numpy python3-pandas python3-sklearn python3-venv libopenblas-dev
+        sudo apt-get install -y -qq python3-scipy python3-numpy python3-pandas python3-sklearn python3-matplotlib python3-venv libopenblas-dev
         echo "✅ System scientific packages installed"
         echo ""
     fi
@@ -54,10 +54,10 @@ fi
 # ── Virtual environment ───────────────────────────────────────────────────
 VENV_DIR=".venv"
 
-# If venv exists but cannot import scipy, recreate with system-site-packages
+# If venv exists but cannot import scipy or has incompatible numpy 2.x, recreate with system packages
 if [ -d "$VENV_DIR" ]; then
-    if ! "$VENV_DIR/bin/python3" -c "import scipy" &>/dev/null; then
-        echo "🔄 Recreating virtual environment with system packages..."
+    if ! "$VENV_DIR/bin/python3" -c "import scipy, numpy; assert numpy.__version__.startswith('1.')" &>/dev/null; then
+        echo "🔄 Recreating virtual environment with system packages (NumPy 1.x)..."
         rm -rf "$VENV_DIR"
     fi
 fi

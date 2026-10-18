@@ -12,11 +12,17 @@ import base64
 import warnings
 from typing import Optional
 
-# Force non-interactive backend before any matplotlib import
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
+# Safe matplotlib import (non-interactive backend)
+try:
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    import matplotlib.patches as mpatches
+    from matplotlib.figure import Figure
+    from matplotlib.backends.backend_agg import FigureCanvasAgg
+    HAS_MATPLOTLIB = True
+except Exception:
+    HAS_MATPLOTLIB = False
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -183,6 +189,9 @@ def generate_shap_waterfall_plot(
 
     Returns base64 string that can be embedded as <img src="data:image/png;base64,...">
     """
+    if not HAS_MATPLOTLIB:
+        return ""
+
     # Sort features by absolute SHAP value
     paired = list(zip(feature_names, shap_values))
     paired.sort(key=lambda x: abs(x[1]), reverse=True)
