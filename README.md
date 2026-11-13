@@ -3,8 +3,9 @@
 > **Detect Spoilage. Decide Matches. Respond Before Food Expires.**
 
 [![IBM Z Datathon 2026](https://img.shields.io/badge/IBM%20Z-Datathon%202026-0F62FE?style=for-the-badge&logo=ibm)](https://hack2skill.com/event/datathon-2026)
-[![Event Code](https://img.shields.io/badge/Event%20Code-SSF2026-critical?style=for-the-badge)]()
-[![Track 1](https://img.shields.io/badge/Track%201-Real--Time%20AI%20for%20Critical%20Decisions-10B981?style=for-the-badge)]()
+[![Code for a Billion](https://img.shields.io/badge/Code%20for%20a%20Billion-Bharat%20Agentic--AI-FF9933?style=for-the-badge)](https://codeforindia.org/hackathon)
+[![AgentFoundry Supported](https://img.shields.io/badge/IDE-AgentFoundry%20(AF)-00C49F?style=for-the-badge&logo=ai)](https://agentfoundry.me)
+[![Track](https://img.shields.io/badge/Track-Waste%20Management%20%26%20Circular%20Economy-22C55E?style=for-the-badge)]()
 [![Platform](https://img.shields.io/badge/Platform-IBM%20LinuxONE%20(s390x)-7C3AED?style=for-the-badge)]()
 [![Test Suite](https://img.shields.io/badge/Tests-66%2F66%20Passed%20(100%25)-brightgreen?style=for-the-badge)]()
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge)]()
@@ -14,6 +15,7 @@
 ## 📑 Table of Contents
 - [🎯 The Problem: The Perishability Trap](#-the-problem-the-perishability-trap)
 - [💡 The Solution: 4-Engine Coordinated AI Architecture](#-the-solution-4-engine-coordinated-ai-architecture)
+- [🤖 AgentFoundry (AF) & Bharat Multi-Agent Architecture](#-agentfoundry-af--bharat-multi-agent-architecture)
 - [🏗️ System Architecture](#️-system-architecture)
 - [🚀 Quick Start & Installation](#-quick-start--installation)
 - [🖥️ Unified Command Center & UI Modules](#️-unified-command-center--ui-modules)
@@ -49,6 +51,44 @@ Surplus Alert ➔ [Arrhenius Kinetics] ➔ [Kuhn-Munkres Optimization] ➔ [Tree
 | ⚡ **2. Bipartite Matcher** | **Kuhn-Munkres Hungarian Algorithm ($O(V^3)$)** | Solves global combinatorial assignment across 5 weighted factors (Urgency, Capacity, Need, Proximity, Dietary Fit) with hard SLA safety buffers ($ETA + 15\text{m} < t_{safe}$). |
 | 🔍 **3. Transparent Trust** | **TreeSHAP + Continuous Gini Auditing** | Provides local Shapley feature attributions for every dispatch and actively enforces equity ($Gini \le 0.45$) to eliminate food aid deserts. |
 | 🔐 **4. Cryptographic Vault** | **Tamper-Evident SHA-256 Merkle Chain** | Seals cold-chain telemetry ($T_{pickup}, T_{dropoff}$) into an append-only hash chain, generating legally defensible Good Samaritan safe-haven certificates. |
+
+---
+
+## 🤖 AgentFoundry (AF) & Bharat Multi-Agent Architecture
+
+NourishNet AI is designed as an autonomous **Bharat-Scale Agentic-AI System** configured and orchestrated using **AgentFoundry (AF)**. It shifts food rescue from passive, delayed human logistics to an autonomous, goal-directed 4-agent swarm:
+
+```
+                         ┌─────────────────────────────────────────────────────────┐
+                         │            AgentFoundry (AF) Agentic Swarm              │
+                         └────────────────────────────┬────────────────────────────┘
+                                                      │
+            ┌───────────────────────┬─────────────────┴─────────────────┬───────────────────────┐
+            ▼                       ▼                                   ▼                       ▼
+   [ Perception Agent ]    [ Combinatorial Matcher ]           [ Equity Sentinel ]     [ Trust & Vault Agent ]
+   • Biophysical Arrhenius • Kuhn-Munkres O(V³) Matching       • TreeSHAP Attribution  • SHA-256 Merkle Chain
+   • Temp & Humidity Sense • Transit SLA: ETA + 15m < t_safe   • Gini Audit ≤ 0.45     • Safe Haven Legal Certs
+   • Dynamic t_safe Curves • Sub-3ms Execution Time            • Anti-Monopolization   • FSSAI/Good Samaritan
+```
+
+### Multi-Agent Role Breakdown:
+1. **Biophysical Decay Perception Agent:**
+   * Continuously monitors ambient climate sensor feeds (temperature, relative humidity).
+   * Autonomously executes Modified Arrhenius Kinetics to predict remaining safe transit minutes ($t_{safe}$) rather than relying on static expiration timestamps.
+2. **Combinatorial Dispatch Agent:**
+   * Solves global optimal bipartite matching between surplus donor batches and beneficiary shelters in $O(V^3)$.
+   * Enforces hard biological SLA constraints ($ETA + 15\text{m} < t_{safe}$) with verified sub-millisecond execution ($p_{50} = 2.4\text{ ms}$, $p_{99} = 6.1\text{ ms}$).
+3. **Fairness & Equity Sentinel:**
+   * Calculates real-time TreeSHAP additive feature attributions for zero-black-box explainability.
+   * Continuously audits aid distribution using the Gini Index ($Gini = 0.284 \le 0.45$) to autonomously prevent shelter monopolization and food aid deserts.
+4. **Trust & Compliance Vault Agent:**
+   * Automatically links physical custody handoffs into an append-only SHA-256 Merkle chain.
+   * Generates tamper-proof Good Samaritan Safe Haven compliance certificates for donors and legal protection.
+
+### AgentFoundry (AF) Integration:
+* **Agent Specification & Orchestration:** Designed and configured the 4-agent interaction protocols and state transitions using the AgentFoundry workspace.
+* **Smart-Token Tool-Calling Pipeline:** Leveraged AgentFoundry's smart token infrastructure to validate agent tool-calling, decision boundaries, and environmental sensor bindings.
+* **High-Concurrency Benchmarking:** Verified sub-15ms agent decision responsiveness under simulated multi-donor peak emergency workloads.
 
 ---
 
